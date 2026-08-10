@@ -14,25 +14,17 @@ public final class ArrayUtils {
 
   // Returns the index of the smallest element in a[from..size).
   public static int indexOfMin(DynamicArray a, int from) {
-    int minIndex = from;
-    for (int i = from + 1; i < a.size(); i++) {
-      if (a.get(i) < a.get(minIndex)) {
-        minIndex = i;
-      }
-    }
-    return minIndex;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   public static void swap(DynamicArray a, int i, int j) {
-    int temp = a.get(i);
-    a.set(i, a.get(j));
-    a.set(j, temp);
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   public static void selectionSort(DynamicArray a) {
-    for (int i = 0; i < a.size() - 1; i++) {
-      int min = indexOfMin(a, i);  // find the smallest remaining element
-      swap(a, i, min);             // move it into position i
-    }
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 }
