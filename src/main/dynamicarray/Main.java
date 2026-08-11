@@ -33,12 +33,12 @@ public final class Main {
   }
 
   // Prints the elements as [a, b, c], reaching them only through public operations.
-  private static void print(DynamicArray a) {
+  private static void print(DynamicArray list) {
     StringBuilder str = new StringBuilder();
     str.append("[");
-    for (int i = 0; i < a.size(); i++) {
-      str.append(a.get(i));
-      if (i < a.size() - 1) {
+    for (int i = 0; i < list.size(); i++) {
+      str.append(list.get(i));
+      if (i < list.size() - 1) {
         str.append(", ");
       }
     }

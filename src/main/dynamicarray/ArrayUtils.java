@@ -13,17 +13,17 @@ public final class ArrayUtils {
   }
 
   // Returns the index of the smallest element in a[from..size).
-  public static int indexOfMin(DynamicArray a, int from) {
+  public static int indexOfMin(DynamicArray list, int from) {
     // TODO: Implement me
     throw new UnsupportedOperationException("TODO: Implement me");
   }
 
-  public static void swap(DynamicArray a, int i, int j) {
+  public static void swap(DynamicArray list, int i, int j) {
     // TODO: Implement me
     throw new UnsupportedOperationException("TODO: Implement me");
   }
 
-  public static void selectionSort(DynamicArray a) {
+  public static void selectionSort(DynamicArray list) {
     // TODO: Implement me
     throw new UnsupportedOperationException("TODO: Implement me");
   }
