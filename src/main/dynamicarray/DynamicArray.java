@@ -1,29 +1,28 @@
 package dynamicarray;
 
-/**
- * A growable array of ints, backed by a fixed-size array that doubles its
- * capacity when it fills up. A client adds elements without ever declaring or
- * managing a capacity.
- */
+/** A growable array of ints. */
 public class DynamicArray {
 
-  private int[] arr;   // the underlying fixed-size storage
-  private int size;    // how many elements we've added so far
+  private int[] arr;
+  private int size;
 
   public DynamicArray() {
-    arr = new int[10];  // start with room for 10 elements
-    size = 0;           // but the array is logically empty
+    arr = new int[10];
+    size = 0;
   }
 
   public void add(int value) {
     if (size == arr.length) {
-      grow();           // out of room — make the backing array bigger first
+      grow();
     }
-    arr[size] = value;  // place the value in the next free slot
-    size++;             // one more element now lives in the array
+    arr[size] = value;
+    size++;
   }
 
   public int get(int index) {
+    if (index < 0 || index >= size) {
+      throw new IndexOutOfBoundsException();
+    }
     return arr[index];
   }
 
@@ -42,23 +41,23 @@ public class DynamicArray {
     return indexOf(value) != -1;
   }
 
+  // Returns -1 if value is not found.
   public int indexOf(int value) {
     for (int i = 0; i < size; i++) {
       if (arr[i] == value) {
-        return i;   // found at index i
+        return i;
       }
     }
-    return -1;      // not found
+    return -1;
   }
 
+  // Removes the first occurrence of value, preserving insertion order.
+  // Returns false if value is not found.
   public boolean remove(int value) {
     int i = indexOf(value);
     if (i == -1) {
-      return false;          // nothing to remove
+      return false;
     }
-    // Shift later elements one slot left to close the gap, preserving order.
-    // (The notes show a cheaper swap-with-last alternative that is correct only
-    // when the contract does not promise to keep elements in order.)
     for (int j = i; j < size - 1; j++) {
       arr[j] = arr[j + 1];
     }
@@ -67,6 +66,7 @@ public class DynamicArray {
     return true;
   }
 
+  // Doubles the capacity.
   private void grow() {
     int[] bigger = new int[arr.length * 2];
     for (int i = 0; i < size; i++) {
