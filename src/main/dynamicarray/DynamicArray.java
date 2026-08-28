@@ -1,14 +1,10 @@
 package dynamicarray;
 
-/**
- * A growable array of ints, backed by a fixed-size array that doubles its
- * capacity when it fills up. A client adds elements without ever declaring or
- * managing a capacity.
- */
+/** A growable array of ints. */
 public class DynamicArray {
 
-  private int[] arr;   // the underlying fixed-size storage
-  private int size;    // how many elements we've added so far
+  private int[] arr;
+  private int size;
 
   public DynamicArray() {
     // TODO: Implement me
@@ -40,16 +36,20 @@ public class DynamicArray {
     throw new UnsupportedOperationException("TODO: Implement me");
   }
 
+  // Returns -1 if value is not found.
   public int indexOf(int value) {
     // TODO: Implement me
     throw new UnsupportedOperationException("TODO: Implement me");
   }
 
+  // Removes the first occurrence of value, preserving insertion order.
+  // Returns false if value is not found.
   public boolean remove(int value) {
     // TODO: Implement me
     throw new UnsupportedOperationException("TODO: Implement me");
   }
 
+  // Doubles the capacity.
   private void grow() {
     // TODO: Implement me
     throw new UnsupportedOperationException("TODO: Implement me");
