@@ -1,8 +1,7 @@
 # Dynamic Array
 
 A growable array of ints, built from a fixed-size array that doubles in capacity
-when it fills up. This is the reference code for Chapter 1 — the classes here are
-assembled exactly as the chapter notes build them up, step by step.
+when it fills up.
 
 ## Prerequisites
 
