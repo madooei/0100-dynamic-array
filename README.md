@@ -1,7 +1,6 @@
 # Dynamic Array
 
-A growable array of ints, built from a fixed-size array that doubles in capacity
-when it fills up.
+A growable array of ints, built from a fixed-size array that doubles in capacity when it fills up.
 
 ## Prerequisites
 
@@ -27,15 +26,10 @@ code/
 
 - `scripts/run.sh` — compiles all source into `out/` and runs the `Main` demo.
 
-There is no build tool and no test suite: testing is introduced later in the
-course. The script above is all you need.
+There is no build tool and no test suite: testing is introduced later in the course. The script above is all you need.
 
 ## What's here
 
-- `dynamicarray.DynamicArray` — the growable array, with `add`, `get`, `set`,
-  `size`, `contains`, `indexOf`, and `remove`, plus a private `grow` that doubles
-  the backing storage.
-- `dynamicarray.ArrayUtils` — a namespace of general-purpose algorithms
-  (`selectionSort`, and its `indexOfMin` and `swap` helpers) that touch a
-  `DynamicArray` only through its public operations.
+- `dynamicarray.DynamicArray` — the growable array, with `add`, `get`, `set`, `size`, `contains`, `indexOf`, and `remove`, plus a private `grow` that doubles the backing storage.
+- `dynamicarray.ArrayUtils` — a namespace of general-purpose algorithms (`selectionSort`, and its `indexOfMin` and `swap` helpers) that touch a `DynamicArray` only through its public operations.
 - `dynamicarray.Main` — a runnable demo that exercises every operation.
