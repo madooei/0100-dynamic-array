@@ -30,7 +30,7 @@ code/
 
 There is no build tool and no test suite: testing is introduced later in the course. The script above is all you need.
 
-## What's here
+## Contents
 
 - `dynamicarray.DynamicArray` — the growable array, with `add`, `get`, `set`, `size`, `contains`, `indexOf`, and `remove`, plus a private `grow` that doubles the backing storage.
 - `dynamicarray.ArrayUtils` — a namespace of general-purpose algorithms (`selectionSort`, and its `indexOfMin` and `swap` helpers) that touch a `DynamicArray` only through its public operations.
