@@ -17,14 +17,16 @@ code/
       dynamicarray/
         DynamicArray.java   # the growable array
         ArrayUtils.java     # general-purpose algorithms over it
-        Main.java           # a small demo
+      demo/                 # one demo per class you implement
+        DynamicArrayDemo.java
+        ArrayUtilsDemo.java
   scripts/
-    run.sh                  # compile everything and run the DynamicArray demo
+    run.sh                  # compile everything and run one demo
 ```
 
 ## How to compile and run
 
-- `scripts/run.sh` — compiles all source into `out/` and runs the `Main` demo.
+- `scripts/run.sh demo.DynamicArrayDemo` — compiles all source into `out/` and runs that one demo. Every class you implement has its own demo.
 
 There is no build tool and no test suite: testing is introduced later in the course. The script above is all you need.
 
@@ -32,4 +34,4 @@ There is no build tool and no test suite: testing is introduced later in the cou
 
 - `dynamicarray.DynamicArray` — the growable array, with `add`, `get`, `set`, `size`, `contains`, `indexOf`, and `remove`, plus a private `grow` that doubles the backing storage.
 - `dynamicarray.ArrayUtils` — a namespace of general-purpose algorithms (`selectionSort`, and its `indexOfMin` and `swap` helpers) that touch a `DynamicArray` only through its public operations.
-- `dynamicarray.Main` — a runnable demo that exercises every operation.
+- `demo.DynamicArrayDemo` and `demo.ArrayUtilsDemo` — one demo per class, each on an example from the notes.
